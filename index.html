@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Claidy's Face Recognition</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="landing-page">
+    <h1>Welcome to Claidy's <span>Photoshop</span></h1>
+    <div class="about">
+      <h2>ABOUT</h2>
+      <p>I am Claidy, a Computer Engineer.</p>
+      <p>I developed this Photo Editor.</p>
+      <p>I will be assisting you in tasks like:</p>
+      <ul>
+        <li>Enhancing</li>
+        <li> and a lot more...</li>
+      </ul>
+    </div>
+    <div class="auth-buttons">
+      <div>
+        <h3>New User?</h3>
+        <button id="register-btn">REGISTER</button>
+      </div>
+      <div>
+        <h3>Already Registered?</h3>
+        <button id="login-btn">LOGIN</button>
+      </div>
+    </div>
+  </div>
+  <div class="registration-page" style="display: none;">
+    <h1>User Registration</h1>
+    <form id="registration-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="button" id="face-scan-btn">Proceed to Face Biometric Scan</button>
+      <button type="submit">REGISTER</button>
+    </form>
+    <video id="video" width="400" height="300" autoplay style="display: none;"></video>
+  </div>
+  <div class="login-page" style="display: none;">
+    <h1>Login</h1>
+    <video id="login-video" width="400" height="300" autoplay></video>
+    <button id="login-face-scan-btn">LOGIN</button>
+    <button id="login-back-btn">Back</button> <!-- Added Back button -->
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgb(25, 50, 75) 0%, rgb(40, 76, 118) 100%) 
+              url('https://seanmurphy.dev/photojs/assets/images/bg.png') 
+              center center 
+              no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Makes the background fixed during scroll */
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Container for different sections */
+.landing-page, .registration-page, .login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(84, 184, 246, 0.85); /* Lighter and more vibrant blue with better transparency */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Sub-header styling */
+h2, h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* About section styling */
+.about {
+  margin: 20px;
+}
+
+/* Auth buttons container */
+.auth-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 20px;
+}
+
+/* Individual auth button container */
+.auth-buttons div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5588ff;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Label styling */
+label {
+  margin: 10px 0 5px;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="number"], input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Video element styling */
+video {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific button styling */
+#face-scan-btn {
+  display: block;
+}
+
+/* Modal styling for better visual hierarchy */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(25, 50, 75) 0%, rgb(40, 76, 118) 100%) 
+              url('http://i.stack.imgur.com/FhHRx.gif') 
+              center center 
+              no-repeat;
+  background-size: contain; /* Ensure the GIF fits well */
+}
+
+/* Ensure modal visibility when body has the loading class, with a fade-in effect */
+body.loading .modal {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframe animations for fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
